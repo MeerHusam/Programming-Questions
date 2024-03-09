@@ -1,0 +1,1 @@
+In this folder, you'll find solutions to so of the LeetCode questions I've worked on. The collection includes a balanced mix of easy and medium problems, along with a few hard ones. I'll be adding more of solutions to this repo soon!
