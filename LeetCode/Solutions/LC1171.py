@@ -33,7 +33,7 @@ class Solution:
             # This operation leaves us with [1, 2, 1], removing the elements between the two occurrences of '3'.
             if prefix_sum in prefix_sum_map:
                 # Link the current node to the node after the last occurrence of this sum
-                curr.next = prefix_sum_map[prefix_sum].next
-            curr = curr.next
+                iter.next = prefix_sum_map[prefix_sum].next
+            iter = iter.next
 
         return newHead.next
