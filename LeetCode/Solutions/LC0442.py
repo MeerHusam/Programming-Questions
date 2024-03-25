@@ -8,7 +8,7 @@
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         output = []
-        for index, a in enumerate(nums):
+        for a in nums:
             if nums[abs(a) - 1] < 0:
                 output.append(abs(a))
             else:
