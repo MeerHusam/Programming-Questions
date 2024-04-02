@@ -1,4 +1,3 @@
-
 """
     Problem Statement: https://leetcode.com/problems/length-of-last-word/
     Author: Meer Husamuddin
