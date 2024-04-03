@@ -28,7 +28,6 @@ class Solution:
             board[a][b] = temp
             return res           
         
-        visited = set()
         for a in range(len(board)):
             for b in range(len(board[0])):
                 if word[0] == board[a][b]:
