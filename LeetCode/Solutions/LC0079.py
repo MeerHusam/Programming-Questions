@@ -1,5 +1,5 @@
 """
-    Problem Statement: https://leetcode.com/problems/longest-palindromic-substring/
+    Problem Statement: https://leetcode.com/problems/word-search/
     Author: Meer Husamuddin
 
     Time Complexity: O(N * M * 4^N)
