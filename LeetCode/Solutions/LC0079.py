@@ -2,25 +2,30 @@
     Problem Statement: https://leetcode.com/problems/word-search/
     Author: Meer Husamuddin
 
-    Time Complexity: O(N * M * 4^N)
+    Time Complexity: O(N * M * 3^W)
     Space Complexity: O(N)
 """
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
+
+        if word.count(word[0]) > word.count(word[-1]):
+            word = word[::-1]
+
         def dfs(a, b, index):
             if index == len(word):
                 return True
             
-            if a < 0 or a >= len(board) or b < 0 or b >= len(board[0]) or (a, b) in visited or word[index] != board[a][b]:
+            if a < 0 or a >= len(board) or b < 0 or b >= len(board[0]) or board[a][b] == "#" or word[index] != board[a][b]:
                 return False
                         
-            visited.add((a, b))
+            temp = board[a][b]
+            board[a][b] = "#"
             # Explore all valid neighbors
             res = (dfs(a+1, b, index+1) or
                 dfs(a-1, b, index+1) or
                 dfs(a, b+1, index+1) or
                 dfs(a, b-1, index+1))
-            visited.remove((a, b))
+            board[a][b] = temp
             return res           
         
         visited = set()
